@@ -45,8 +45,6 @@ public class Ventana extends JFrame implements WindowListener{
 			}
 		});
 	}
-
-	String estadoVentana = "";
 	
 	/**
 	 * Create the frame.
@@ -109,7 +107,5 @@ public class Ventana extends JFrame implements WindowListener{
 		// TODO Auto-generated method stub
 		textArea.append("Ventana desactivada\n");
 	}
-
-	
 	
 }
