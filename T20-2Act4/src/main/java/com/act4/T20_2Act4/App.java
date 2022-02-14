@@ -1,13 +1,16 @@
 package com.act4.T20_2Act4;
 
+import vista.Ventana;
+
 /**
- * Hello world!
+ * autor: Abel, Edgar, Raul
+ * fecha modificacion: 14/02/2022
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Ventana.vista();
     }
 }

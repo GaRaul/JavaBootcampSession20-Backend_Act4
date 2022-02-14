@@ -15,24 +15,11 @@ public class Ventana extends JFrame implements WindowListener{
 
 	private JPanel contentPane;
 	public TextArea textArea;
-	
-	public TextArea getTextArea() {
-		return textArea;
-	}
-
-	public void setTextArea(TextArea textArea) {
-		this.textArea = textArea;
-	}
-	
-	public String textoTextArea() {
-		return textArea.getText();
-	
-	}
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void vista() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
