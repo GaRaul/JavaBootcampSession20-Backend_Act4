@@ -9,10 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JTextPane;
 import java.awt.TextArea;
 
-public class Ventana extends JFrame{
+public class Ventana extends JFrame implements WindowListener{
 
 	private JPanel contentPane;
 	public TextArea textArea;
@@ -53,8 +52,8 @@ public class Ventana extends JFrame{
 	 * Create the frame.
 	 */
 	public Ventana() {
-		EventosVentana eventosVentana = new EventosVentana();
-		addWindowListener(eventosVentana);
+		
+		addWindowListener(this);
 		
 		setTitle("Ventana oyente");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,12 +70,44 @@ public class Ventana extends JFrame{
 		textArea = new TextArea();
 		textArea.setBounds(72, 62, 380, 160);
 		contentPane.add(textArea);
+		
+		
+	}
 
-		textArea.append("Hola");		
-		textArea.append("Hola mundo");		
-		textArea.append("Hola mundo 2");
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana abierta\n");
 		
-		
+	}
+
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Cerrando ventana\n");
+	}
+
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana cerrada\n");
+	}
+
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana minimizada\n");
+	}
+
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana desminimizada\n");
+	}
+
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana activada\n");
+	}
+
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		textArea.append("Ventana desactivada\n");
 	}
 
 	
